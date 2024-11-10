@@ -1,0 +1,596 @@
+// Creador del Codigo Cristian Rojas ................
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Corazón Verde, soluciones ambientales para un futuro sostenible">
+    <title>Corazón Verde - Soluciones Ambientales</title>
+
+    <!-- Incluir Bootstrap desde CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- AOS (Animate on Scroll) para animaciones -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Estilo general para el cuerpo de la página */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff; 
+            color: #000000; 
+        }
+
+        header {
+            background-color: #003400; 
+            color: white;
+            padding: 20px 0;
+        }
+
+        /* Sección de Introducción */
+        #inicio {
+            padding: 50px;
+            background-image: url('imagenes/Bos.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        #inicio p {
+            color: #003400; 
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        #inicio h1 {
+            color: #003400; 
+            font-size: 3rem;
+        }
+
+        /* Estilo para secciones adicionales */
+        section {
+            padding: 60px 0;
+        }
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #003400;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Formulario de Suscripción */
+        #newsletter {
+            background-color: #e8f5e9;
+        }
+
+        .btn-subscribe {
+            background-color: #003400;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .navbar-nav .nav-link {
+            color: white;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #003400;
+        }
+
+        /* Estilos para la galería y mapa */
+        .carousel-item img {
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* Estilo para proyectos */
+        #Proyectos {
+            background-color: #e1f5fe;
+        }
+
+        .project-card {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-icon {
+            font-size: 3rem;
+            color: #003400;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <header>
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="#inicio" class="d-flex align-items-center text-white text-decoration-none">
+                <img src= "Red Social/LG.png"  width="100">
+                <span class="h3">CORAZÓN VERDE</span>
+            </a>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Servicios">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Proyectos">Proyectos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Testimonios">Testimonios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Galeria">Galería</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Mapa">Ubicación</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contactos">Contactos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Redes-Sociales">Redes Sociales</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección de Introducción -->
+    <section id="inicio" data-aos="fade-up">
+        <div class="container">
+            <p class="lead">"Sostenibilidad en cada paso"</p>
+            <h1 class="display-3">El cambio comienza en ti</h1>
+        </div>
+    </section>
+
+    <!-- Sección Quiénes Somos -->
+    <section id="QuienesSomos" data-aos="fade-up">
+        <div class="container text-center">
+            <h2>Quiénes Somos</h2>
+            <p>En Corazón Verde nos dedicamos a ofrecer soluciones integrales para un futuro más sostenible. Nuestra misión es ayudar a las empresas y personas a reducir su impacto ambiental mediante prácticas responsables y asesoría experta.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Misión</h4>
+                    <p>Crear conciencia ambiental y proporcionar soluciones para el cuidado del medio ambiente.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Visión</h4>
+                    <p>Ser líderes en soluciones ambientales sostenibles, impulsando el cambio en la industria y la sociedad.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Valores</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-leaf"></i> Compromiso ambiental</li>
+                        <li><i class="fas fa-users"></i> Trabajo en equipo</li>
+                        <li><i class="fas fa-hand-holding-heart"></i> Responsabilidad social</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sección de Servicios -->
+<section id="Servicios" data-aos="fade-up">
+    <div class="container text-center">
+        <h2 class="mb-4">Servicios de Corazón Verde</h2>
+        <p class="mb-5">Conoce los servicios que ofrecemos para contribuir al cuidado del medio ambiente:</p>
+        
+        <!-- Fila 1: Servicios que se estan ofreciendo -->
+        <div class="row mb-4">
+            <!-- Servicio 1: Asesorías legales en temas ambientales -->
+            <div class="col-md-4 mb-4">
+                <div class="card project-card shadow-lg">
+                    <div class="card-body">
+                        <i class="fas fa-gavel project-icon mb-3" style="font-size: 40px;"></i>
+                        <h5 class="card-title mb-3">Asesorías legales en temas ambientales</h5>
+                        <p class="card-text">"Protege tu negocio con nuestra experta asesoría legal en temas ambientales, garantizando el cumplimiento de regulaciones y normas."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio 2: Creación de proyectos en cuidado y conservación del ambiente -->
+            <div class="col-md-4 mb-4">
+                <div class="card project-card shadow-lg">
+                    <div class="card-body">
+                        <i class="fas fa-paint-brush project-icon mb-3" style="font-size: 40px;"></i>
+                        <h5 class="card-title mb-3">Creación de proyectos en cuidado y conservación del ambiente</h5>
+                        <p class="card-text">"Diseñamos proyectos innovadores para proteger y conservar nuestro entorno, asegurando un futuro sostenible."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio 3: Ejecución de proyectos -->
+            <div class="col-md-4 mb-4">
+                <div class="card project-card shadow-lg">
+                    <div class="card-body">
+                        <i class="fas fa-play project-icon mb-3" style="font-size: 40px;"></i>
+                        <h5 class="card-title mb-3">Ejecución de proyectos</h5>
+                        <p class="card-text">"Ponemos en acción tus proyectos ambientales con eficiencia y eficacia, garantizando resultados tangibles."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila 2: Servicios -->
+        <div class="row mb-4">
+            <!-- Servicio 4: Manejo de aguas -->
+            <div class="col-md-4 mb-4">
+                <div class="card project-card shadow-lg">
+                    <div class="card-body">
+                        <i class="fas fa-water project-icon mb-3" style="font-size: 40px;"></i>
+                        <h5 class="card-title mb-3">Manejo de aguas</h5>
+                        <p class="card-text">"Gestionamos recursos hídricos de manera sostenible, protegiendo este valioso recurso para las generaciones futuras."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio 5: Manejo de suelos -->
+            <div class="col-md-4 mb-4">
+                <div class="card project-card shadow-lg">
+                    <div class="card-body">
+                        <i class="fas fa-tractor project-icon mb-3" style="font-size: 40px;"></i>
+                        <h5 class="card-title mb-3">Manejo de suelos</h5>
+                        <p class="card-text">"Protegemos y restauramos suelos para mantener la fertilidad y biodiversidad, asegurando un futuro agrícola sostenible."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio 6: Educación ambiental -->
+            <div class="col-md-4 mb-4">
+                <div class="card project-card shadow-lg">
+                    <div class="card-body">
+                        <i class="fas fa-chalkboard-teacher project-icon mb-3" style="font-size: 40px;"></i>
+                        <h5 class="card-title mb-3">Educación ambiental</h5>
+                        <p class="card-text">"Educamos y concienciamos sobre la importancia del cuidado del medio ambiente, inspirando acciones sostenibles."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila 3: Servicios -->
+        <div class="row mb-4">
+            <!-- Servicio 7: Proyectos socio-ambientales -->
+            <div class="col-md-4 mb-4">
+                <div class="card project-card shadow-lg">
+                    <div class="card-body">
+                        <i class="fas fa-users project-icon mb-3" style="font-size: 40px;"></i>
+                        <h5 class="card-title mb-3">Proyectos socio-ambientales</h5>
+                        <p class="card-text">"Unimos comunidades y medio ambiente a través de proyectos que promueven el desarrollo sostenible y la justicia social."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio 8: Gestión de residuos -->
+            <div class="col-md-4 mb-4">
+                <div class="card project-card shadow-lg">
+                    <div class="card-body">
+                        <i class="fas fa-trash project-icon mb-3" style="font-size: 40px;"></i>
+                        <h5 class="card-title mb-3">Gestión de residuos</h5>
+                        <p class="card-text">"Te ayudamos a reducir, reutilizar y reciclar la mayor parte de residuos sólidos, con la creación de planes de manejo integral de residuos sólidos adaptados a tu empresa."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio 9: Proyectos forestales -->
+            <div class="col-md-4 mb-4">
+                <div class="card project-card shadow-lg">
+                    <div class="card-body">
+                        <i class="fas fa-tree project-icon mb-3" style="font-size: 40px;"></i>
+                        <h5 class="card-title mb-3">Proyectos forestales</h5>
+                        <p class="card-text">"Protegemos y restauramos ecosistemas forestales para conservar biodiversidad y mitigar el cambio climático."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+   <!-- Sección de Equipo de Trabajo -->
+<section id="Equipo" class="bg-light" data-aos="fade-up">
+    <div class="container text-center">
+        <h2>Conoce al equipo de Corazón Verde</h2>
+        <p class="mb-5">Un equipo comprometido con el cuidado del medio ambiente y el desarrollo sostenible.</p>
+        
+        <!-- Equipo Ejecutivo de Corazón Verde -->
+        <div class="row mb-5">
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Alejandro Messif Lopez Marin</h5>
+                        <p class="card-text"><strong>Director de Campo</strong><br>
+                            Administrador Ambiental con especialización en Políticas Públicas y Gestión Ambiental. Responsable de la estrategia general y toma de decisiones.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Cristian Camilo Rojas González</h5>
+                        <p class="card-text"><strong>Director Administrativo</strong><br>
+                            Ingeniero Ambiental con especialización en Gestión de Recursos Hídricos y Energéticos. Supervisa la implementación de proyectos y programas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Valentina Acosta Valencia</h5>
+                        <p class="card-text"><strong>Directora de Desarrollo Sostenible</strong><br>
+                            Administradora Ambiental con especialización en Economía Circular y Desarrollo Sostenible. Se enfoca en la innovación y crecimiento sostenible de la empresa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Equipo Administrativo -->
+        <div class="row mb-5">
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Luis Fernando Gómez</h5>
+                        <p class="card-text"><strong>Abogado Ambiental</strong><br>
+                            Especialista en legislación ambiental, lidera la asesoría jurídica de Corazón Verde.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">María Alejandra Díaz</h5>
+                        <p class="card-text"><strong>Administradora de Empresas</strong><br>
+                            Gestiona los recursos y operaciones de la empresa.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Juan Carlos Ramírez</h5>
+                        <p class="card-text"><strong>Contador Público</strong><br>
+                            Se encarga de la gestión financiera y contabilidad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Equipo Técnico -->
+        <div class="row mb-5">
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Ana María Hernández</h5>
+                        <p class="card-text"><strong>Ingeniera Ambiental y Sanitaria</strong><br>
+                            Desarrolla soluciones para la gestión de residuos y agua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Carlos Andrés Gutiérrez</h5>
+                        <p class="card-text"><strong>Ingeniero Ambiental</strong><br>
+                            Trabaja en proyectos de conservación y restauración ambiental.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Daniel Felipe Salazar</h5>
+                        <p class="card-text"><strong>Ingeniero Agrónomo</strong><br>
+                            Se enfoca en la implementación de prácticas sostenibles en agricultura.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Equipo de Apoyo -->
+        <div class="row mb-5">
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Sofía Elena Martínez</h5>
+                        <p class="card-text"><strong>Diseñadora Gráfica</strong><br>
+                            Crea materiales visuales para campañas y proyectos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Leonardo Fabio Torres</h5>
+                        <p class="card-text"><strong>Trabajador Social</strong><br>
+                            Coordina programas de educación ambiental y participación comunitaria.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Juliana Patricia Morales</h5>
+                        <p class="card-text"><strong>Psicóloga</strong><br>
+                            Desarrolla programas de bienestar y capacitación para empleados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grupo Técnico de Campo -->
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="mb-4">Grupo Técnico de Campo</h3>
+                <p>Nuestro equipo de campo está compuesto por profesionales altamente capacitados, que trabajan en terreno para implementar proyectos y programas socio-ambientales.</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Alejandro Gómez</h5>
+                        <p class="card-text"><strong>Técnico Ambiental</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Valeria Rodríguez</h5>
+                        <p class="card-text"><strong>Especialista en Educación Ambiental</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Juan Pablo García</h5>
+                        <p class="card-text"><strong>Técnico en Gestión de Residuos</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">María José Martínez</h5>
+                        <p class="card-text"><strong>Especialista en Conservación</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Carlos Mario Hernández</h5>
+                        <p class="card-text"><strong>Técnico en Agricultura Sostenible</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+    <!-- Sección de Contactos -->
+    <section id="contactos" class="py-5" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center mb-4">Contactos</h2>
+            <p class="text-center">Si tienes preguntas o deseas más información, no dudes en contactarnos.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form action="mailto:solucionescorazonverde@gmail.com" method="POST" enctype="text/plain">
+                        <div class="mb-3">
+                            <input type="text" name="name" class="form-control" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" name="email" class="form-control" placeholder="Tu email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea name="message" class="form-control" placeholder="Tu mensaje" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Redes Sociales</title>
+        <style>
+            /* Estilos para la sección de Redes Sociales */
+            #Redes-Sociales {
+                background-color: #003400;  /* Fondo verde oscuro */
+                color: #ffffff;             /* Texto blanco */
+                padding-top: 50px;
+                padding-bottom: 50px;
+                text-align: center;         /* Centra todo el texto en la sección */
+            }
+    
+            #Redes-Sociales h3 {
+                color: #ffffff;  /* Color blanco para el título */
+                font-size: 2rem;  /* Tamaño de fuente más grande */
+            }
+    
+            /* Contenedor de iconos de redes sociales */
+            .redes-sociales-icon {
+                display: inline-block;      /* Alineación en línea de los iconos */
+                margin: 0 15px;             /* Espaciado entre los iconos */
+            }
+    
+            /* Estilo para las imágenes de los iconos */
+            .redes-sociales-icon img {
+                width: 40px;                /* Tamaño de los iconos */
+                transition: filter 0.3s ease; /* Transición suave para el hover */
+                filter: grayscale(100%);    /* Los iconos están en escala de grises por defecto */
+            }
+    
+            /* Efecto de hover en los iconos */
+            .redes-sociales-icon img:hover {
+                filter: grayscale(0%);      /* Los iconos vuelven a color cuando se pasa el ratón */
+            }
+        </style>
+    </head>
+    <body>
+    
+        <!-- Sección de Redes Sociales -->
+        <section id="Redes-Sociales">
+            <h3>Redes Sociales</h3>
+            <div class="redes-sociales-container">
+                <a href="https://facebook.com" target="_blank" class="redes-sociales-icon">
+                    <img src="Red Social/FC.webp" alt="Facebook">
+                </a>
+                <a href="https://twitter.com" target="_blank" class="redes-sociales-icon">
+                    <img src="Red Social/TW.webp" alt="Twitter">
+                </a>
+                <a href="https://instagram.com" target="_blank" class="redes-sociales-icon">
+                    <img src="Red Social/IG.webp" alt="Instagram">
+                </a>
+                <a href="https://whatsapp.com/" target="_blank" class="redes-sociales-icon">
+                    <img src="Red Social/Wh.webp" alt="whatsapp">
+                </a>
+                <a href="https://gmail.com" target="_blank" class="redes-sociales-icon">
+                    <img src="Red Social/GM.webp" alt="Gmail">
+                </a>
+            </div>
+        </section>
+    
+    </body>
+    </html>    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Corazón Verde. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Inicializar AOS -->
+    <script>
+        AOS.init({
+            duration: 1200,  // Duración de la animación
+        });
+    </script>
+
